@@ -1,0 +1,16 @@
+{% extends 'myapp/base.html' %}
+
+{% block body %}
+<center>
+	<h1>haveibeenpwned.com password check</h1><br>
+<form method="POST">
+
+	{% csrf_token %}
+
+	<input type="text" name="input" id="input">
+	<input type="submit">
+</form>
+  <br><pre>{{ inputbox }}</pre>
+  <br><pre>{{ pwnedornot }}</pre>
+</center>
+{% endblock %}

@@ -2,7 +2,8 @@
 
 {% block body %}
 <center>
-	<h1>haveibeenpwned.com password check</h1><br>
+	<h1>haveibeenpwned.com password check</h1>
+	<h2>should you change your password?</h2><br>
 <form method="POST">
 
 	{% csrf_token %}
@@ -12,5 +13,6 @@
 </form>
   <br><pre>{{ inputbox }}</pre>
   <br><pre>{{ pwnedornot }}</pre>
+  <br><pre>{{ breachnum }}</pre>
 </center>
 {% endblock %}
